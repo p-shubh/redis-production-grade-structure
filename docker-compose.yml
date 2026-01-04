@@ -1,12 +1,11 @@
-version: "3.9"
-
 services:
   redis-master:
     image: redis:7.2
     container_name: redis-master
     command: ["redis-server", "/redis-conf/redis-master.conf"]
     volumes:
-      - ./redis-master.conf:/redis-conf/redis-master.conf
+      - redis-master-data:/data
+      - ./redis-conf/redis-master.conf:/redis-conf/redis-master.conf
     ports:
       - "6379:6379"
     networks:
@@ -17,7 +16,8 @@ services:
     container_name: redis-replica-1
     command: ["redis-server", "/redis-conf/redis-replica.conf"]
     volumes:
-      - ./redis-replica.conf:/redis-conf/redis-replica.conf
+      - redis-replica-1-data:/data
+      - ./redis-conf/redis-replica.conf:/redis-conf/redis-replica.conf
     depends_on:
       - redis-master
     networks:
@@ -28,7 +28,8 @@ services:
     container_name: redis-replica-2
     command: ["redis-server", "/redis-conf/redis-replica.conf"]
     volumes:
-      - ./redis-replica.conf:/redis-conf/redis-replica.conf
+      - redis-replica-2-data:/data
+      - ./redis-conf/redis-replica.conf:/redis-conf/redis-replica.conf
     depends_on:
       - redis-master
     networks:
@@ -39,9 +40,8 @@ services:
     container_name: sentinel-1
     command: ["redis-sentinel", "/redis-conf/sentinel.conf"]
     volumes:
-      - ./sentinel.conf:/redis-conf/sentinel.conf
-    depends_on:
-      - redis-master
+      - sentinel-1-data:/data
+      - ./redis-conf/sentinel.conf:/redis-conf/sentinel.conf
     networks:
       - redis-net
 
@@ -50,9 +50,8 @@ services:
     container_name: sentinel-2
     command: ["redis-sentinel", "/redis-conf/sentinel.conf"]
     volumes:
-      - ./sentinel.conf:/redis-conf/sentinel.conf
-    depends_on:
-      - redis-master
+      - sentinel-2-data:/data
+      - ./redis-conf/sentinel.conf:/redis-conf/sentinel.conf
     networks:
       - redis-net
 
@@ -61,12 +60,37 @@ services:
     container_name: sentinel-3
     command: ["redis-sentinel", "/redis-conf/sentinel.conf"]
     volumes:
-      - ./sentinel.conf:/redis-conf/sentinel.conf
-    depends_on:
-      - redis-master
+      - sentinel-3-data:/data
+      - ./redis-conf/sentinel.conf:/redis-conf/sentinel.conf
     networks:
       - redis-net
+
+  # 🔥 DEV-ONLY GO RUN SERVICE (NO BUILD)
+  go-dev:
+    image: golang:1.21-alpine
+    container_name: go-dev
+    working_dir: /app
+    volumes:
+      - ./go-app:/app
+    command: sh -c "go mod tidy && go run ."
+    depends_on:
+      - redis-master
+      - sentinel-1
+      - sentinel-2
+      - sentinel-3
+    networks:
+      - redis-net
+    tty: true
+    stdin_open: true
 
 networks:
   redis-net:
     driver: bridge
+
+volumes:
+  redis-master-data:
+  redis-replica-1-data:
+  redis-replica-2-data:
+  sentinel-1-data:
+  sentinel-2-data:
+  sentinel-3-data:
