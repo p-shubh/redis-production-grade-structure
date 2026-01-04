@@ -1,0 +1,72 @@
+version: "3.9"
+
+services:
+  redis-master:
+    image: redis:7.2
+    container_name: redis-master
+    command: ["redis-server", "/redis-conf/redis-master.conf"]
+    volumes:
+      - ./redis-master.conf:/redis-conf/redis-master.conf
+    ports:
+      - "6379:6379"
+    networks:
+      - redis-net
+
+  redis-replica-1:
+    image: redis:7.2
+    container_name: redis-replica-1
+    command: ["redis-server", "/redis-conf/redis-replica.conf"]
+    volumes:
+      - ./redis-replica.conf:/redis-conf/redis-replica.conf
+    depends_on:
+      - redis-master
+    networks:
+      - redis-net
+
+  redis-replica-2:
+    image: redis:7.2
+    container_name: redis-replica-2
+    command: ["redis-server", "/redis-conf/redis-replica.conf"]
+    volumes:
+      - ./redis-replica.conf:/redis-conf/redis-replica.conf
+    depends_on:
+      - redis-master
+    networks:
+      - redis-net
+
+  sentinel-1:
+    image: redis:7.2
+    container_name: sentinel-1
+    command: ["redis-sentinel", "/redis-conf/sentinel.conf"]
+    volumes:
+      - ./sentinel.conf:/redis-conf/sentinel.conf
+    depends_on:
+      - redis-master
+    networks:
+      - redis-net
+
+  sentinel-2:
+    image: redis:7.2
+    container_name: sentinel-2
+    command: ["redis-sentinel", "/redis-conf/sentinel.conf"]
+    volumes:
+      - ./sentinel.conf:/redis-conf/sentinel.conf
+    depends_on:
+      - redis-master
+    networks:
+      - redis-net
+
+  sentinel-3:
+    image: redis:7.2
+    container_name: sentinel-3
+    command: ["redis-sentinel", "/redis-conf/sentinel.conf"]
+    volumes:
+      - ./sentinel.conf:/redis-conf/sentinel.conf
+    depends_on:
+      - redis-master
+    networks:
+      - redis-net
+
+networks:
+  redis-net:
+    driver: bridge
