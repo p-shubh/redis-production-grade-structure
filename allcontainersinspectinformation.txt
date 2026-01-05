@@ -1,0 +1,813 @@
+✘ shubhamprajapati@shubhams-MacBook-Air  ~  docker inspect sentinel-1
+
+[
+    {
+        "Id": "601b3801bc535826ea68f562ed164280f0a4c4918beaaede1820f7a7401fc780",
+        "Created": "2026-01-04T11:41:42.025606042Z",
+        "Path": "docker-entrypoint.sh",
+        "Args": [
+            "redis-sentinel",
+            "/redis-conf/sentinel.conf"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 8496,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-01-04T11:42:05.663762636Z",
+            "FinishedAt": "2026-01-04T11:41:52.63909313Z"
+        },
+        "Image": "sha256:fe24f885dbd007b6a302effc035944a38d1e06821354fdbc91351869cd33a88a",
+        "ResolvConfPath": "/var/lib/docker/containers/601b3801bc535826ea68f562ed164280f0a4c4918beaaede1820f7a7401fc780/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/601b3801bc535826ea68f562ed164280f0a4c4918beaaede1820f7a7401fc780/hostname",
+        "HostsPath": "/var/lib/docker/containers/601b3801bc535826ea68f562ed164280f0a4c4918beaaede1820f7a7401fc780/hosts",
+        "LogPath": "/var/lib/docker/containers/601b3801bc535826ea68f562ed164280f0a4c4918beaaede1820f7a7401fc780/601b3801bc535826ea68f562ed164280f0a4c4918beaaede1820f7a7401fc780-json.log",
+        "Name": "/sentinel-1",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "redis-production-grade-structure_sentinel-1-data:/data:rw",
+                "/host_mnt/Users/shubhamprajapati/Documents/p-shubh/redis-production-grade-structure/redis-conf/sentinel.conf:/redis-conf/sentinel.conf:rw"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "redis-production-grade-structure_redis-net",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware",
+                "/sys/devices/virtual/powercap"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": null,
+            "Name": "overlayfs"
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "redis-production-grade-structure_sentinel-1-data",
+                "Source": "/var/lib/docker/volumes/redis-production-grade-structure_sentinel-1-data/_data",
+                "Destination": "/data",
+                "Driver": "local",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "bind",
+                "Source": "/host_mnt/Users/shubhamprajapati/Documents/p-shubh/redis-production-grade-structure/redis-conf/sentinel.conf",
+                "Destination": "/redis-conf/sentinel.conf",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "601b3801bc53",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "6379/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "GOSU_VERSION=1.17",
+                "REDIS_VERSION=7.2.12",
+                "REDIS_DOWNLOAD_URL=http://download.redis.io/releases/redis-7.2.12.tar.gz",
+                "REDIS_DOWNLOAD_SHA=97c60478a7c777ac914ca9d87a7e88ba265926456107e758c62d8f971d0196bc"
+            ],
+            "Cmd": [
+                "redis-sentinel",
+                "/redis-conf/sentinel.conf"
+            ],
+            "Image": "redis:7.2",
+            "Volumes": {
+                "/data": {}
+            },
+            "WorkingDir": "/data",
+            "Entrypoint": [
+                "docker-entrypoint.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "b0831751186a3ea63e3e4935496fcf4cad660b2b9c9fe1fde2c6e5177800452a",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "",
+                "com.docker.compose.image": "sha256:fe24f885dbd007b6a302effc035944a38d1e06821354fdbc91351869cd33a88a",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "redis-production-grade-structure",
+                "com.docker.compose.project.config_files": "/Users/shubhamprajapati/Documents/p-shubh/redis-production-grade-structure/docker-compose.yml",
+                "com.docker.compose.project.working_dir": "/Users/shubhamprajapati/Documents/p-shubh/redis-production-grade-structure",
+                "com.docker.compose.service": "sentinel-1",
+                "com.docker.compose.version": "2.38.2"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "d51cc115e68f064610b90c7f6dbd75e7ebf57c74f44bcecf16ae49164b2f1df5",
+            "SandboxKey": "/var/run/docker/netns/d51cc115e68f",
+            "Ports": {},
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "redis-production-grade-structure_redis-net": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "sentinel-1",
+                        "sentinel-1"
+                    ],
+                    "MacAddress": "f2:eb:3d:9e:b3:93",
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "8c76a62cdefac217326f727c36a420ebfbce1babe38b19caebf61a9ba5e503b4",
+                    "EndpointID": "060e5be51d9bb74d6d7ca39307ee89fd6f72797e8d00ec517c5749208d936dce",
+                    "Gateway": "172.22.0.1",
+                    "IPAddress": "172.22.0.4",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "sentinel-1",
+                        "601b3801bc53"
+                    ]
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:fdf0f5518c4d63e792c791c53bebb68576d909ec4bb45901123fee9f9a3a6c3d",
+            "size": 2486,
+            "annotations": {
+                "com.docker.official-images.bashbrew.arch": "arm64v8",
+                "org.opencontainers.image.base.digest": "sha256:cb7b1727683aabf9d631a6a423091ed381058ec51be0f073974c69eaa48835cc",
+                "org.opencontainers.image.base.name": "debian:bookworm-slim",
+                "org.opencontainers.image.created": "2025-12-29T23:42:53Z",
+                "org.opencontainers.image.revision": "d42d7aec93b1c54dd46f37a66a92f62478456039",
+                "org.opencontainers.image.source": "https://github.com/redis/docker-library-redis.git#d42d7aec93b1c54dd46f37a66a92f62478456039:7.2/debian",
+                "org.opencontainers.image.url": "https://hub.docker.com/_/redis",
+                "org.opencontainers.image.version": "7.2.12"
+            },
+            "platform": {
+                "architecture": "arm64",
+                "os": "linux",
+                "variant": "v8"
+            }
+        }
+    }
+]
+
+
+
+
+ shubhamprajapati@shubhams-MacBook-Air  ~  docker inspect sentinel-2 
+
+[
+    {
+        "Id": "4753594e132657fe261cf4330695ba486e04f6c2803a97cb54cc50321d809628",
+        "Created": "2026-01-04T11:41:42.026713917Z",
+        "Path": "docker-entrypoint.sh",
+        "Args": [
+            "redis-sentinel",
+            "/redis-conf/sentinel.conf"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 8501,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-01-04T11:42:05.664997095Z",
+            "FinishedAt": "2026-01-04T11:41:52.636910214Z"
+        },
+        "Image": "sha256:fe24f885dbd007b6a302effc035944a38d1e06821354fdbc91351869cd33a88a",
+        "ResolvConfPath": "/var/lib/docker/containers/4753594e132657fe261cf4330695ba486e04f6c2803a97cb54cc50321d809628/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/4753594e132657fe261cf4330695ba486e04f6c2803a97cb54cc50321d809628/hostname",
+        "HostsPath": "/var/lib/docker/containers/4753594e132657fe261cf4330695ba486e04f6c2803a97cb54cc50321d809628/hosts",
+        "LogPath": "/var/lib/docker/containers/4753594e132657fe261cf4330695ba486e04f6c2803a97cb54cc50321d809628/4753594e132657fe261cf4330695ba486e04f6c2803a97cb54cc50321d809628-json.log",
+        "Name": "/sentinel-2",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "redis-production-grade-structure_sentinel-2-data:/data:rw",
+                "/host_mnt/Users/shubhamprajapati/Documents/p-shubh/redis-production-grade-structure/redis-conf/sentinel.conf:/redis-conf/sentinel.conf:rw"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "redis-production-grade-structure_redis-net",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware",
+                "/sys/devices/virtual/powercap"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": null,
+            "Name": "overlayfs"
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "redis-production-grade-structure_sentinel-2-data",
+                "Source": "/var/lib/docker/volumes/redis-production-grade-structure_sentinel-2-data/_data",
+                "Destination": "/data",
+                "Driver": "local",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "bind",
+                "Source": "/host_mnt/Users/shubhamprajapati/Documents/p-shubh/redis-production-grade-structure/redis-conf/sentinel.conf",
+                "Destination": "/redis-conf/sentinel.conf",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "4753594e1326",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "6379/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "GOSU_VERSION=1.17",
+                "REDIS_VERSION=7.2.12",
+                "REDIS_DOWNLOAD_URL=http://download.redis.io/releases/redis-7.2.12.tar.gz",
+                "REDIS_DOWNLOAD_SHA=97c60478a7c777ac914ca9d87a7e88ba265926456107e758c62d8f971d0196bc"
+            ],
+            "Cmd": [
+                "redis-sentinel",
+                "/redis-conf/sentinel.conf"
+            ],
+            "Image": "redis:7.2",
+            "Volumes": {
+                "/data": {}
+            },
+            "WorkingDir": "/data",
+            "Entrypoint": [
+                "docker-entrypoint.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "19684e9174589bde2bec24b5e861e40a868e01ee5e1af48d5d306ef35c55a8a9",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "",
+                "com.docker.compose.image": "sha256:fe24f885dbd007b6a302effc035944a38d1e06821354fdbc91351869cd33a88a",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "redis-production-grade-structure",
+                "com.docker.compose.project.config_files": "/Users/shubhamprajapati/Documents/p-shubh/redis-production-grade-structure/docker-compose.yml",
+                "com.docker.compose.project.working_dir": "/Users/shubhamprajapati/Documents/p-shubh/redis-production-grade-structure",
+                "com.docker.compose.service": "sentinel-2",
+                "com.docker.compose.version": "2.38.2"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "58020c484f45d59df5356ca4d688d5e765b41fc036b8b961de6654199efe1d2e",
+            "SandboxKey": "/var/run/docker/netns/58020c484f45",
+            "Ports": {},
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "redis-production-grade-structure_redis-net": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "sentinel-2",
+                        "sentinel-2"
+                    ],
+                    "MacAddress": "4a:b9:21:7e:85:cb",
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "8c76a62cdefac217326f727c36a420ebfbce1babe38b19caebf61a9ba5e503b4",
+                    "EndpointID": "6839df3cb229fb261f884571ebc8616b964864d9d0b41291294d61920708b5a2",
+                    "Gateway": "172.22.0.1",
+                    "IPAddress": "172.22.0.3",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "sentinel-2",
+                        "4753594e1326"
+                    ]
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:fdf0f5518c4d63e792c791c53bebb68576d909ec4bb45901123fee9f9a3a6c3d",
+            "size": 2486,
+            "annotations": {
+                "com.docker.official-images.bashbrew.arch": "arm64v8",
+                "org.opencontainers.image.base.digest": "sha256:cb7b1727683aabf9d631a6a423091ed381058ec51be0f073974c69eaa48835cc",
+                "org.opencontainers.image.base.name": "debian:bookworm-slim",
+                "org.opencontainers.image.created": "2025-12-29T23:42:53Z",
+                "org.opencontainers.image.revision": "d42d7aec93b1c54dd46f37a66a92f62478456039",
+                "org.opencontainers.image.source": "https://github.com/redis/docker-library-redis.git#d42d7aec93b1c54dd46f37a66a92f62478456039:7.2/debian",
+                "org.opencontainers.image.url": "https://hub.docker.com/_/redis",
+                "org.opencontainers.image.version": "7.2.12"
+            },
+            "platform": {
+                "architecture": "arm64",
+                "os": "linux",
+                "variant": "v8"
+            }
+        }
+    }
+]
+
+
+shubhamprajapati@shubhams-MacBook-Air  ~  docker inspect sentinel-3
+
+[
+    {
+        "Id": "d920f7fbc237eebf66de57296eb44d54699cd8b588a9d58ffaccdcfd8e7b5174",
+        "Created": "2026-01-04T11:41:42.020944708Z",
+        "Path": "docker-entrypoint.sh",
+        "Args": [
+            "redis-sentinel",
+            "/redis-conf/sentinel.conf"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 8497,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-01-04T11:42:05.663800303Z",
+            "FinishedAt": "2026-01-04T11:41:52.576897089Z"
+        },
+        "Image": "sha256:fe24f885dbd007b6a302effc035944a38d1e06821354fdbc91351869cd33a88a",
+        "ResolvConfPath": "/var/lib/docker/containers/d920f7fbc237eebf66de57296eb44d54699cd8b588a9d58ffaccdcfd8e7b5174/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/d920f7fbc237eebf66de57296eb44d54699cd8b588a9d58ffaccdcfd8e7b5174/hostname",
+        "HostsPath": "/var/lib/docker/containers/d920f7fbc237eebf66de57296eb44d54699cd8b588a9d58ffaccdcfd8e7b5174/hosts",
+        "LogPath": "/var/lib/docker/containers/d920f7fbc237eebf66de57296eb44d54699cd8b588a9d58ffaccdcfd8e7b5174/d920f7fbc237eebf66de57296eb44d54699cd8b588a9d58ffaccdcfd8e7b5174-json.log",
+        "Name": "/sentinel-3",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "redis-production-grade-structure_sentinel-3-data:/data:rw",
+                "/host_mnt/Users/shubhamprajapati/Documents/p-shubh/redis-production-grade-structure/redis-conf/sentinel.conf:/redis-conf/sentinel.conf:rw"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "redis-production-grade-structure_redis-net",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware",
+                "/sys/devices/virtual/powercap"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": null,
+            "Name": "overlayfs"
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "redis-production-grade-structure_sentinel-3-data",
+                "Source": "/var/lib/docker/volumes/redis-production-grade-structure_sentinel-3-data/_data",
+                "Destination": "/data",
+                "Driver": "local",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "bind",
+                "Source": "/host_mnt/Users/shubhamprajapati/Documents/p-shubh/redis-production-grade-structure/redis-conf/sentinel.conf",
+                "Destination": "/redis-conf/sentinel.conf",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "d920f7fbc237",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "6379/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "GOSU_VERSION=1.17",
+                "REDIS_VERSION=7.2.12",
+                "REDIS_DOWNLOAD_URL=http://download.redis.io/releases/redis-7.2.12.tar.gz",
+                "REDIS_DOWNLOAD_SHA=97c60478a7c777ac914ca9d87a7e88ba265926456107e758c62d8f971d0196bc"
+            ],
+            "Cmd": [
+                "redis-sentinel",
+                "/redis-conf/sentinel.conf"
+            ],
+            "Image": "redis:7.2",
+            "Volumes": {
+                "/data": {}
+            },
+            "WorkingDir": "/data",
+            "Entrypoint": [
+                "docker-entrypoint.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "164ef180e621ee790dc524e8e9c1c71e5cd532d5ca142287f8f7c0cac1c9e1b4",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "",
+                "com.docker.compose.image": "sha256:fe24f885dbd007b6a302effc035944a38d1e06821354fdbc91351869cd33a88a",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "redis-production-grade-structure",
+                "com.docker.compose.project.config_files": "/Users/shubhamprajapati/Documents/p-shubh/redis-production-grade-structure/docker-compose.yml",
+                "com.docker.compose.project.working_dir": "/Users/shubhamprajapati/Documents/p-shubh/redis-production-grade-structure",
+                "com.docker.compose.service": "sentinel-3",
+                "com.docker.compose.version": "2.38.2"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "08b341d9cf89585b51eb593c8465fd55bbeb9d5b0482b52f0d6c190dac25bf3b",
+            "SandboxKey": "/var/run/docker/netns/08b341d9cf89",
+            "Ports": {},
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "redis-production-grade-structure_redis-net": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "sentinel-3",
+                        "sentinel-3"
+                    ],
+                    "MacAddress": "b6:f2:cc:26:6e:a7",
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "8c76a62cdefac217326f727c36a420ebfbce1babe38b19caebf61a9ba5e503b4",
+                    "EndpointID": "3eb9e9a5d43445e8eff4426b4daab7fc247482cdd4d6d2618f8b30f66505f7b7",
+                    "Gateway": "172.22.0.1",
+                    "IPAddress": "172.22.0.5",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "sentinel-3",
+                        "d920f7fbc237"
+                    ]
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:fdf0f5518c4d63e792c791c53bebb68576d909ec4bb45901123fee9f9a3a6c3d",
+            "size": 2486,
+            "annotations": {
+                "com.docker.official-images.bashbrew.arch": "arm64v8",
+                "org.opencontainers.image.base.digest": "sha256:cb7b1727683aabf9d631a6a423091ed381058ec51be0f073974c69eaa48835cc",
+                "org.opencontainers.image.base.name": "debian:bookworm-slim",
+                "org.opencontainers.image.created": "2025-12-29T23:42:53Z",
+                "org.opencontainers.image.revision": "d42d7aec93b1c54dd46f37a66a92f62478456039",
+                "org.opencontainers.image.source": "https://github.com/redis/docker-library-redis.git#d42d7aec93b1c54dd46f37a66a92f62478456039:7.2/debian",
+                "org.opencontainers.image.url": "https://hub.docker.com/_/redis",
+                "org.opencontainers.image.version": "7.2.12"
+            },
+            "platform": {
+                "architecture": "arm64",
+                "os": "linux",
+                "variant": "v8"
+            }
+        }
+    }
+]

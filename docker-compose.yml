@@ -42,6 +42,8 @@ services:
     volumes:
       - sentinel-1-data:/data
       - ./redis-conf/sentinel.conf:/redis-conf/sentinel.conf
+    ports:
+      - "26379:26379"
     networks:
       - redis-net
 
@@ -52,6 +54,8 @@ services:
     volumes:
       - sentinel-2-data:/data
       - ./redis-conf/sentinel.conf:/redis-conf/sentinel.conf
+    ports:
+      - "26380:26379"
     networks:
       - redis-net
 
@@ -62,12 +66,14 @@ services:
     volumes:
       - sentinel-3-data:/data
       - ./redis-conf/sentinel.conf:/redis-conf/sentinel.conf
+    ports:
+      - "26381:26379"
     networks:
       - redis-net
 
-  # 🔥 DEV-ONLY GO RUN SERVICE (NO BUILD)
+  # 🔥 DEV-ONLY GO RUN SERVICE (OPTIONAL – CAN KEEP OR REMOVE)
   go-dev:
-    image: golang:1.21-alpine
+    image: golang:1.23.0-alpine
     container_name: go-dev
     working_dir: /app
     volumes:
