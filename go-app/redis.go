@@ -17,28 +17,26 @@ func InitRedisSentinel() error {
 	RDB = redis.NewFailoverClient(&redis.FailoverOptions{
 		MasterName: "mymaster",
 
-		// 🔥 Sentinel addresses (HOST MODE)
+		// ✅ HOST → Docker (ports published)
 		SentinelAddrs: []string{
-			"localhost:26379",
-			"localhost:26380",
-			"localhost:26381",
+			"127.0.0.1:26379",
+			"127.0.0.1:26380",
+			"127.0.0.1:26381",
 		},
 
-		// 🔐 Redis AUTH (hardcoded)
-		Password: "redis123",
+		// ❌ REMOVE unless Redis AUTH is enabled
+		// Password: "redis123",
 
-		// Timeouts
-		DialTimeout:  5 * time.Second,
-		ReadTimeout:  3 * time.Second,
-		WriteTimeout: 3 * time.Second,
+		DialTimeout:  10 * time.Second,
+		ReadTimeout:  5 * time.Second,
+		WriteTimeout: 5 * time.Second,
 
-		// Pool tuning
 		PoolSize:     20,
 		MinIdleConns: 5,
 		MaxRetries:   3,
 	})
 
-	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 
 	if err := RDB.Ping(ctx).Err(); err != nil {
