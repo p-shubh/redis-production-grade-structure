@@ -73,6 +73,10 @@ import (
 )
 
 func main() {
+	connection()
+}
+
+func sentinal() {
 	log.Println("[TEST] starting redis sentinel test")
 
 	rdb := redis.NewFailoverClient(&redis.FailoverOptions{
