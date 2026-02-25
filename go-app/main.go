@@ -73,7 +73,7 @@ import (
 )
 
 func main() {
-	connection()
+	sentinal()
 }
 
 func sentinal() {
