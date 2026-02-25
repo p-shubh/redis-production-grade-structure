@@ -42,9 +42,9 @@ services:
     image: redis:7.2
     container_name: sentinel-1
     restart: always
-    command: ["redis-server", "/data/sentinel.conf", "--sentinel"]
+    command: ["redis-server", "/redis-conf/sentinel.conf", "--sentinel"]
     volumes:
-      - ./sentinel-data/s1:/data
+      - ./redis-conf/sentinel.conf:/redis-conf/sentinel.conf
     ports:
       - "26379:26379"
     networks:
@@ -54,9 +54,9 @@ services:
     image: redis:7.2
     container_name: sentinel-2
     restart: always
-    command: ["redis-server", "/data/sentinel.conf", "--sentinel"]
+    command: ["redis-server", "/redis-conf/sentinel.conf", "--sentinel"]
     volumes:
-      - ./sentinel-data/s2:/data
+      - ./redis-conf/sentinel.conf:/redis-conf/sentinel.conf
     ports:
       - "26380:26379"
     networks:
@@ -66,11 +66,22 @@ services:
     image: redis:7.2
     container_name: sentinel-3
     restart: always
-    command: ["redis-server", "/data/sentinel.conf", "--sentinel"]
+    command: ["redis-server", "/redis-conf/sentinel.conf", "--sentinel"]
     volumes:
-      - ./sentinel-data/s3:/data
+      - ./redis-conf/sentinel.conf:/redis-conf/sentinel.conf
     ports:
       - "26381:26379"
+    networks:
+      - redis-net
+
+  go-app:
+    build: ./go-app
+    container_name: go-app
+    depends_on:
+      - redis-master
+      - sentinel-1
+      - sentinel-2
+      - sentinel-3
     networks:
       - redis-net
 
